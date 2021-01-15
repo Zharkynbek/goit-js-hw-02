@@ -12,13 +12,15 @@
     при этом результат prompt записывать в массив чисел не нужно, после чего снова пользователю предлагается ввести
 число в prompt. */
 
-let input;
-const numbers = [];
-let total = 0;
+	let input;
+  let total = 0;
+const number = [];
 
-do {
-  input = prompt('Enter your number');
-  Number.isNaN(Number(input)) ? alert('Enter a number') : total += Number(input);
-} while (input !== null) {
-  alert(`Общая сумма чисел равна ${total}`);
-};
+  do {
+	  input = prompt('Введите число');
+	  Number.isNaN(Number(input))
+	    ? alert('Было введено не число, попробуйте еще раз!')
+	    : (total += Number(input));
+} while (input !== null);
+
+	alert(`Общая сумма чисел равна ${total}`);
